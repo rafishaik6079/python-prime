@@ -1,0 +1,163 @@
+IDLE(Integrated Development and Learning Environment):
+#script mode
+#Interactive mode
+prompt: inplaced between """,'''
+
+Display methods:
+
+#print with prompt
+a,b=10,20
+print(a+b)
+print("value a:",a,"value of b",b,"addition",a+b)
+
+#print with f string
+print(f"addition of {a} and {b} is {a+b}")
+
+#print with dot(.) format
+print("".format(variable))
+print("addition of {} and {} is {}".format(a,b,a+b))
+
+#print with format spesifiers
+print("%d"%(variables))
+print("addition of %d and %d is %d"%(a,b,a+b))
+
+#Input types
+these are 2 types
+1.Compile time input(Static)
+2.Runtime input(Dynamic)
+
+#Compile time input
+variable = value
+-->variable is name of memory location
+Python has the advantage of it has same valus in different variables it can be stored in same memory location
+a=10
+b=0.8
+c="hello"
+d='hi'
+e="""hello world"""
+f='''hello world'''
+
+#Runtime input(Dynamic)
+#Using input()
+variable=datatype(input("prompt"))
+#intezer input
+a=int(input())#prompt is optional
+#float input
+a=float(input("prompt"))
+b=float(input("prompt"))
+print("addition of {} and {} is {}".format(a,b,a+b))
+#String input
+name=str(input("prompt"))(or)
+n=input("prompt")
+diviser<--2)10(5-->
+            10
+           ----
+            0-->remainder
+%...modulus...gives remainder
+note: Less value "%" greater value
+Gives less value will be the answer
+/...division...goves quotient as answer without values
+note: less value / greater value
+zero with potint values
+//...Floor division gives quotient as answer
+3%5...3
+3/5...0.
+3//5...0
+
+#Comparision operators(Relational operators):
+It is used to create conditions
+<  -->
+>  -->
+<= -->
+>= -->
+== -->
+!= -->
+
+#Practice programes:
+1. Even/Odd and +ve/ +ve/zero number
+   2,4,6,8,10,12,14,16....
+2. Greatest of 2 numbers
+3. Greatest of 3 numbers
+
+#Condition statements
+1.if
+2.if..else
+3.if..elif..else(more then one condition)
+4.nested if(condition inside condition)
+
+#Answers
+a=int(input("a:"))
+if a%2==0:
+---->print("even")
+else (or) if a%2!=0:
+---->print("odd")
+print("done")
+
+#checking for positive or negetive or zero
+if a==0:
+---->zero
+elif a>0:
+---->positive
+else:
+---->negetive
+
+#checking gretest of 2 numbers
+a=int(input("a: "))
+b=int(input("b: "))
+if a>b:
+---->a is positive
+else:
+---->b is negetive
+
+#checking gretest of 3 numbers using logical operators
+a=int(input("a: "))
+b=int(input("b: "))
+if a>b and a>c:
+---->a is big
+if b>a and b>c:
+---->b is big
+else:
+---->c is big
+
+#checking gretest of 3 numbers without using logical operators
+if a>b:
+---->if a>c:
+---->---->a is big
+---->else:
+---->---->c is big
+else:
+---->if b>c:
+---->---->b is big
+---->else:
+---->---->c is big
+
+#Logical operators:
+1.and
+2.or
+3.not
+
+#Control flow statements:
+-->Controlling the flow of statement
+-->Looping Statements
+1.for
+2.while
+
+#while...int values
+Mostly it will use leads infinite condition
+In loop there is 4 steps is there
+1.Intialize(Starting point)
+2.Condition(Stop)
+3.Statement(display which you want)
+4.Update the initial value/condition
+
+
+
+
+
+
+
+
+
+
+
+
