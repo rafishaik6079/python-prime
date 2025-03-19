@@ -1,0 +1,122 @@
+#Task-1:Print first n prime numbers
+n=int(input("n: "))
+c=0
+i=2
+while c<n:
+---->for j in range(2,i):
+---->---->if i%j==0:
+---->---->---->break
+---->else:
+---->---->print(i)
+---->---->c=c+1
+---->i+=1
+
+#Task-2: To convert decimal number into binary and octal
+bin(12)...0b
+oct(12)...0o
+hex(12)...0x
+#Type conversion without using predefined finctions
+a=6
+b=""
+while a!=0:
+---->b=str(a%2)+b...0...1...1
+---->a=a//2
+print("Binary form:",b)
+
+#Reverse a number
+n=int(input("Enter a number: "))
+r=0
+while n!=0:
+---->div=n%10
+---->r=r*10+div
+---->n=n//10
+
+#check whether the given number is palindrome or not
+-->Palindrome:Number or string if the original value is equel to its reverse of the value.(ex:121==121)
+n=121
+r=0
+while n!=0:
+---->r=r*10+n%10
+---->n=n//10
+if r==n:
+---->print("%d is palindrome"%(n))
+else:
+---->print("%d is not palindrome"%(n))
+
+#Count the digits total digits in a given number
+n=int(input("Enter a number: "))
+r=0
+c=0
+while n!=0:
+---->r=n%10+r
+---->n=n//10
+---->c=c+1
+print(f"count: {n} \n sum: {r}")
+
+#Check whether the given number is perfect, abundent, deficient
+-->Perfect number: Sum of diviisors is equel to its number.(ex: n=6, factors: 1,2,3 ,sum of digits is 6, 6==6(given number))
+-->Abundent number: Sum of divisors exeeds the number.(Ex: n=100, factors: 1,2,4,5,10,20,25,50 ,sum of digits is 117, 117>100(given number))
+Deficient number: Sum of divisors is less then to its number.(ex: n=8, factors: 1,2,4 ,sum of divisors is 7, 7<8(given number)
+s=0
+n=int(input("Enter a number: "))
+r=[]
+for i in range(1,n):
+    if n%i==0:
+        r.append(i)
+print(r)
+if sum(r)==n:
+    print("%d is Perfect"%(n))
+if sum(r)>n:
+    print("%d is abundent"%(n))
+if sum(r)<n:
+---->print("%d is deficiant"%(n))
+
+#check the given number is strong or not
+-->Strong number: It is of the factorial of each digit is equels to its number. (ex:145= 1!+4!+5!=1+24+120= 145
+n=145
+t=n
+l=[]
+while n!=0:
+    div=n%10
+    fact=1
+    for i in range(1,div+1):
+        fact=fact*i
+---->l.append(fact)
+---->n=n//10
+s=0
+for j in l:
+---->s=s+j
+if s==t:
+---->print("Strong number")
+else:
+---->print("Not a Strong number")
+
+#Armstrong number:
+Armstrong number is a number that equels to the sum of its own digit raised to the power of the number of digits. (ex:n= 1234, 1^4+2^4+3^4+4^4=1+16+81+256, 354!=n(4631))
+n=int(input("Enter a number: "))
+t=n
+c=0
+while n!=0:
+---->r=n%10
+---->s=s+(r**c)
+---->n=n//10
+print("Count of digits",c)
+n=t
+s=0
+while n!=0:
+---->r=n%10
+---->s=s+(r**c)
+---->n=n//10
+if s==t:
+---->
+
+#Errors:
+1.syntax
+2.runtime (name error,space error,value error)
+3.logical (zero division error)
+pre-defined errors: Error handling: Exceptions:
+
+
+
+
+
