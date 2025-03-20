@@ -1,0 +1,290 @@
+#swapping of 2 numbers
+2 numbers
+print("before swapping: a={}, b={}".format(a,b))
+#Assignment statements
+2 types:
+1.chained assignment
+a="hello"/67/"hiii"/89.8
+b=c=d=a
+2.Multiple assignment statement
+a,b,c=1,2,3
+a,b=10,20
+print(a,b)
+a,b=b,a
+print("after a={}, b={}".format(a,b))
+1.without using 3rd variable
+a,b=10,20
+print("before a={},b={}".format(a,b))
+temp=a
+a=b
+b=temp
+print("after a={},b={}".format(a,b))
+2.without using 3rd variable
+a,b=2,3
+print(a,b)
+a=a+b
+b=a-b
+a=a-b
+print(a,b)
+
+#Functions
+---->A function is a block of organized, reusable code designed to perform a specific task. It is mainly used for "memory management".
+-->Improves the re-usability
+-->debugging
+-->Reduces the size of the code
+
+#Types of functions:
+2 types
+1.pre-defined functions
+print()
+input()
+
+2.User-defined functions
+-->def functions-->named functions
+-->lambda functions-->nameless functions
+
+#def functions:
+syntax:
+keyword function name(parameters): -->function defining
+---->statement
+---->statement
+function calling(arguments)#calling the functions
+keyword:def
+functionname: userdefined
+parameters/arguments:variables
+function should call by its name
+#example:
+def greet():
+---->print("Good evening")
+greet()
+
+#Global variables
+def add():
+---->print(a+b)
+a,b=10,20
+add()
+
+#Local variables
+def add():
+---->a,b=10,20
+---->print(a+b)
+add()
+
+#Paremeters/Arguments: (suggetion:Without arguments we cannot take parameters.)
+#positional arguments(position of a value)
+def add(c,d):
+---->print(c+d)
+a,b=10,20
+add(a,b)
+disadvantage: If position is changed then value also be changed. So we can take "Keyword arguments".
+
+#Keyword arguments:
+def sub(c,d):
+---->print(c-b)
+a,b=10,20
+sub(c=a,d=b)
+
+#Length of arguments using astrick(*):
+def work(*variable):
+---->for i in a:
+---->---->print(i,end=" ")
+work(1,2,3,4,5,6,7,8,9)
+
+#Fruitful functions: functions with return statements.
+def add():
+---->return "hello"
+print(add())
+
+#Arrays in python
+collection of similar datatypes is called arrays.
+-->In python we are list which is collection of different datatypes, represented by [].
+list=[]
+-->mutable(changable)
+-->ordered
+-->indexed(one by one calling based upon position)
+-->slicing(calling based on a perticuler range)
+-->duplicates are allowed
+#basic operations:
+1.Membership
+2.repetition
+3.concatenation
+4.updating
+5.comparision
+
+#representation of a list:
+l1=[]
+print(type(l1)) #<class 'list'>
+a="hello"
+l2=list(a) #Here "list" is a keyword. It is used for type conversion.
+print(type(l2))#<class 'list'>
+l3=[1,20.3,"hello",(1,2,3),[1,2,3]]
+print(l3) -->Mixed list
+l4=[1,2,3,4,5]-->array(collection of similar data)
+print(l4)
+
+#Runtime list:
+-->string should be split().
+s=input("Enter: ").split()
+print(s)
+print(type(s)) #<class 'list'>
+-->To use this we get the values as strings. It we want integers we can choose this two methods.
+1)l1=input("Enter: ).split()
+print("string input:",l1)
+l=len(l1)
+print("length of list",l)
+for i in range(0, len(l1)):
+---->l1[i]=int(l1[i])
+print("int list:",l1)
+#find out element in a given list:
+s=int(input("Enter search element: "))
+l1=input("Enter values seperated by spaces: ")).split()
+for i in range(0,len(l1)):
+---->if s==l1[i]:
+---->---->print("found")
+---->---->break
+else:
+---->print("not found")
+
+#Using map() to convert string list into int list
+s=input("Enter: ").split()
+l1=list(map(int,s))
+#Output:  Enter: 1 2 3 4 5
+	[1, 2, 3, 4, 5]
+l1=list(map(int,input("Enter: ").split()))
+print(l1)
+#Output:  Enter: 1 2 3 4 5
+	[1, 2, 3, 4, 5]
+
+#Membership(in,not in):  It is used to check the elements in list or not. It returns True/false.
+l1=input("Enter: ").split()   Enter: 1 2 3 4
+s=input("search: ")              search: 3
+print(s in l1)	         True
+print(s not in l1)	         False
+
+#Repetetion(*): Using for repeat the values of a list.
+l1=[1,2,3]
+print(l1*3)   #[1,2,3,1,2,3,1,2,3]
+
+#Concatenation: Combining two lists.
+l1=[1,2,3]
+l2=[4,5,6]
+print(l1+l2)  #[1,2,3,4,5,6]
+
+#Comparision: Returns True or False.
+l1=[1,2,3]
+l2=[3,2,1]
+print(l1==l2)   #False
+
+#Updating:
+l1=[1,2,3,4]
+print(l1)  #[1,2,3,4]
+l1[0]=100
+l1[1]="hello"
+l1[2]="python world"
+print(l1)   #[100, hello, python world, 4]
+l1[4]="welcome"
+print(l1)
+
+#index: Used to access the individual elements from the given datatype. Index starts from 0-n-1(Where n is length of datatype)
+-->2 types of index:
+Positive index: left to right(0 to n-1)
+Negetive index: right to left(-1 to -n)
+
+#Slicing: Used to access the range of elements from the given data.
+syntax:
+slicing[start:stop-1:step]
+-->5 techniques are there:
+-->l1[::]  #Get entire list
+-->l1[:]   #Get entire list
+-->l1[::-1]#Get entire list in reverse direction
+-->l1[:3] #Gives starting(0) to 3-1 
+-->l1[3:] #starts from 3 to last
+-->Step:
+----->l1=[1,2,3,4,5,6,78,9]
+----->l1[::1]     #[1, 2, 3, 4, 5, 6, 7, 8, 89, 0]
+----->l1[::2]    #[1, 3, 5, 7, 89]
+----->l1[::3]    #[1, 4, 7, 0]
+----->l1[::4]   #[1, 5, 89]
+
+#Predifined functions:
+1.sum()
+2.min()
+3.max()
+4.len()      
+5.sorted() -->Ascending order of values.
+list(enumerate)-->
+
+#example
+a,b,c=input("Enter a,b,c").split()    #4 3 2
+print(a,b,c)   #4 3 2 
+l1=[int(a),int(b),int(c)]
+print(max(l1))  #4
+print(min(l1))  #2
+l1=list(map(int,input("Enter: ").split()))
+print(min(l1)
+print(max(l1)
+
+#dot(.) methods:
+-->.copy()
+-->.append()  #add at last(as it is)
+-->.extend()   
+-->.insert(position,value)
+-->.remove(element)
+-->.pop()  #last value, delete index based one
+-->.sort(key=None, reverse=False)
+-->.reverse()
+-->.find()
+-->.index()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
