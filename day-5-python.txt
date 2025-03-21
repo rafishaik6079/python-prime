@@ -1,0 +1,87 @@
+#reverse of list
+l1=[10,20,30,40]
+print("reverse: ",l1=[::-1])
+#using loop
+for i in range(len(l1)-1,-1,-1):
+--->print(l1[i],end=" ")
+#remove duplicate elements from a list
+l1=list(map(int,input("Enter list: ").split()))
+print(l1)
+l=[]
+#using loop
+for i in l1:
+--->if i not in l:
+--->--->l.append(i)
+print(l)
+
+#Remove missing argument()
+l1=list(map(int,input("Enter list: ").split()))
+for i in range(1,len(l1)):
+    if i not in l1:
+        print("missing arsument:",i)   
+else:
+    print("missing:",len(l1)+1)
+#.append,.extend,.insert
+l1=[10,20,30]
+l1.append(40)
+l1.append([50,60])   #[10,20,30,40[50,60]]
+l1.append("hello")
+l1.append(["pyhon","word"])
+l1.extend(1)
+l1.insert(index,value)
+#remove,pop,delete
+l1.remove(value)
+#pop: delete last element
+l1.pop()
+print(l1)
+#pop of index
+l1.pop(2)
+print(l1)
+#sorted: Assign list to new variables
+l1=[2,3,1]
+print(sorted(l1))
+print("original",l1)
+#.sort: not assigned
+l2=[3,4,2,1]
+l2.sort()
+print("sorted:",l2)
+print(l2)
+#descending order
+l3.sort(keys=None,reverse=False)
+
+#List comprehensions
+#nested list/matrix
+l1=[[1,2,3],[4,5,6],[7,8,9]]
+for i in l1:
+    print(i)
+for i in l1:
+    print(*i)
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
+1 2 3
+4 5 6
+7 8 9
+#taken matrix as input
+l1=[[1 for j in range(3)] for i in range(3)]
+for i in l1:
+---->print(*i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
