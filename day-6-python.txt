@@ -1,0 +1,183 @@
+outerlist=[]
+innerlist=[]
+r,c=map(int,input().split())
+for i in  range(r):
+----->innerlist=[]
+----->for j in range(c):
+----->---->x=int(input())
+----->---->innerlist.append(x)
+----->outerlist.append(innerlist)
+print(outerlist)
+
+#how to access values from 2-dimensional matrix
+l=[[1,2,3],[4,5,6],[7,8,9]]
+for i in range(len(l)):
+---->for j in range(len(l[i])):
+---->---->print(l[i][j])
+
+#unit matrix: The detrminent of the matrix is one then we call as "unit matrix".
+[[1 0 0]
+ [0 1 0]
+ [0 0 1]]
+#convert 2-dimensional matrix to unit matrix:
+l=[[1,2,3],[4,5,6],[7,8,9]]
+for i in range(len(l)):
+    for j in range(len(l[i])):
+        if i==j:
+            l[i][j]=1
+        else:
+            l[i][j]=0
+print(l)
+
+#types of parameteres in print function:
+Object(s): It can be any python object(s) like string, list, tuple, etc. But before printing all objects get converted into strings.
+sep: It is an optional parameter used to define the separation among different objects to be printed. By default an empty string(“”) is used as a separator.
+end: It is an optional parameter used to set the string that is to be printed at the end. The default value for this is set as line feed(“\n”).
+file: It is an optional parameter used when writing on or over a file. By default,, it is set to produce standard output as part of sys.stdout.
+flush: It is an optional boolean parameter to set either a flushed or buffered output. If set True, it takes flushed else it takes buffered. By default, it is set to False.
+
+#how to display list in matrix form:
+l=[[1,2,3],[4,5,6],[7,8,9]]
+for i in range(len(l)):
+    for j in range(len(l[i])):
+        print(l[i][j],end="")
+    print()
+-->here "end" is seperates value and print in same line
+
+#Sum of values of diagonal in a matrix:
+l=[[1,2,3],[4,5,6],[7,8,9]]
+s=0
+for i in range(len(l)):
+    for j in range(len(l[i])):
+        if i==j:
+            s+=l[i][j]
+        print(l[i][j],end="")
+    print()
+print(s)
+
+#Structure of 2-dimensional matrix
+row=3
+col=3
+(0,0),(0,1),(0,2)
+(1,0), (1,1), (1,2)
+(2,0), (2,1), (2,2)
+
+#3-dimension matrix:
+size
+row
+coloumn
+
+#in the outer  for loop nothing but i which is rows representation
+#inner for representes coloumn j
+
+#Sum of reverse of diagonal in 2-dimensional matrix:
+#if we have increment order o f i and decrement order in pairo f matrix then we have to use formula: i==n-j-1 or j==n-i-1
+l=[[1,2,3],[4,5,6],[7,8,9]]
+s=0
+for i in range(len(l)):
+    for j in range(len(l[i])):
+        if j==3-i-1:
+            s+=l[i][j]
+        print(l[i][j],end="")
+    print()
+print(s)
+#note: Here the two formulas are same because of no.of coloumns are equel to no.of rows
+
+#find the minimum element in 2-dimensional matrix for each row and sum of the elements:
+
+PYTHON BASICS + OOPS + DSA + DYNAMIC PROGRAM = PERFECT IN PYTHON
+
+#program for max of row elements and display their sum
+l=[[1,2,3],[4,5,6],[7,8,9]]
+m=[]
+for i in range(len(l)):
+    for j in range(len(l[i])):
+        print(l[i][j],end="")
+    print()
+for k in l:
+    m.append(max(k))
+print(m)
+print(sum(m))
+
+#sum of minimum elements of each row with factorial
+print(outerlist)'''
+import math
+l=[[1,2,3],[4,5,6],[7,8,9]]
+m=[]
+for i in range(len(l)):
+    for j in range(len(l[i])):
+        print(l[i][j],end="")
+    print()
+for k in l:
+    m.append(math.factorial(min(k)))
+print("min of each row with factorial:",*m)
+print(sum(m))
+
+#Transpose of a given matrix:
+Tranpose matrix: It is convert rows into coloumns
+l=[[1, 2, 3],                        [[1, 1, 1],
+     [1, 2, 3],   ----------->       [2, 2, 2],
+     [1, 2, 3]]                         [3, 3, 3]]
+#program
+l=[[1,2,3],[4,5,6],[7,8,9]]
+innerlist=[]
+outerlist=[]
+for i in range(len(l)):
+    innerlist=[]
+    for j in range(len(l[i])):
+        innerlist.append(l[j][i])
+    outerlist.append(innerlist)
+print(outerlist)
+#no of rows is not equel to 
+l=[[1,2,3],[4,5,6],[7,8,9]]
+innerlist=[]
+outerlist=[]
+for i in range(len(l)):
+    innerlist=[]
+    for j in range(len(l[i])):
+        innerlist.append(l[j][i])
+    outerlist.append(innerlist)
+print(outerlist[::-1])
+
+#write a python program to print the sum of squares of diagonal of a 2-dimensional elements
+l=[[1,2,3],[4,5,6],[7,8,9]]
+s=0
+for i in range(len(l)):
+    for j in range(len(l[i])):
+        if i==j:
+            s+=(l[i][j])**2
+            print(l[i][j],end="")
+    print()
+print(s)
+
+#write a python program which take input as row size and take the coloumn elements whenever user enter -1 to avoid taking input
+l=[[1, 2, 3, 4, 5, -1],
+     [4, 5, 6, 5, -1],
+     [3, 4, 7, 4, -1]]
+r=int(input("Enter row size: "))
+innerlist=[]
+outerlist=[]
+for i in range(r):
+    while True:
+        c=int(input())
+        if c==-1:
+            break
+        innerlist.append(c)
+    outerlist.append(innerlist)
+print(outerlist)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
