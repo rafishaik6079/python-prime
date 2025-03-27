@@ -1,0 +1,169 @@
+mathematical shapes pattern:
+#square:
+n=int(input())
+for i in range(n):           -->i is no.of rows
+    for j in range(n):       -->j is no.of columns
+        if i+2==j+1:
+            print("*", end =" ")-->"end" is used to seperate with spaces
+            print(i,end=" ")
+            print(j,end=" ")
+            print(i*j,end=" ")
+            print(i+j,end=" ")
+        else: print(" ",end= " ")
+    print()
+#output
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+#increment by 1
+n=5
+c=1
+for i in range(n):
+    for j in range(n):
+        print(c,end=" ")
+        c+=1
+    print()
+#output
+1 2 3 4 5 
+6 7 8 9 10 
+11 12 13 14 15 
+16 17 18 19 20 
+21 22 23 24 25 
+
+n=5
+c=1
+for i in range(n):
+    for j in range(n):
+        print(chr(c+64+32),end=" ")
+        c+=1
+    print()
+#output
+A B C D E             
+F G H I J 
+K L M N O 
+P Q R S T 
+U V W X Y
+
+n=5
+c=1
+for i in range(n):
+    for j in range(n):
+        print(chr(c+64+32),end=" ")
+    c+=1
+    print()
+a a a a a 
+b b b b b 
+c c c c c 
+d d d d d 
+e e e e e
+
+#left side right angle triangle
+n=5
+for i in range(n):
+    for j in range(i+1):
+        print("*",end=" ")
+    print()
+#output
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+#inverse left side right angle triangle
+n=5
+for i in range(n):
+    for j in range(n-i):
+        print("*",end=" ")
+    print()
+#output
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
+#right side right angle triangle
+n=5
+for i in range(n):
+    for j in range(n-i-1):
+        print(" ",end=" ")
+    for j in range(i+1):
+        print("*",end=" ")    
+    print()
+#output
+               * 
+           * * 
+        * * * 
+    * * * * 
+* * * * * 
+
+#inverse right side right angle triangle
+n=5
+for i in range(n):
+    for j in range(i):
+        print(" ",end=" ")
+    for j in range(n-i):
+        print("*",end=" ")    
+    print()
+#output
+* * * * * 
+   * * * * 
+       * * * 
+          * * 
+             *
+#butterfly pattern
+n=10
+for i in range(n):
+    for j in range(i+1):
+        print("*",end="")
+    for j in range(n-i):
+        print(" ",end="")
+    for j in range(n-i-1):
+        print(" ",end="")
+    for j in range(i+1):
+        print("*",end="")
+    print()
+for i in range(n):
+    for j in range(n-i):
+        print("*",end="")
+    for j in range(i+1):
+        print(" ",end="")
+    for j in range(i):
+        print(" ",end="")
+    for j in range(n-i):
+        print("*",end="") 
+    print()
+#output
+*                   *
+**                 **
+***               ***
+****             ****
+*****           *****
+******         ******
+*******       *******
+********     ********
+*********   *********
+********** **********
+********** **********
+*********   *********
+********     ********
+*******       *******
+******         ******
+*****           *****
+****             ****
+***               ***
+**                 **
+*                   *
+
+
+
+
+
+
+
+
+
+
+
+
